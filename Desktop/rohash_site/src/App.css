@@ -1,0 +1,38 @@
+.App {
+  font-family: sans-serif;
+ 
+  margin-left:50px;
+margin-block-end: auto;
+}
+.vertical-menu {
+  width: 120px;
+  margin-left: auto;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+  
+}
+.active{
+  text-align: center;
+}
+.text-center{
+  text-align: center;
+}
+.Login{
+margin-top:300px ;
+}
+
