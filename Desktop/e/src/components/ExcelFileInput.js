@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import XLSX from "xlsx";
 import { setTable } from "../reducers";
+import FilePicker from './FilePicker';
 
 class ExcelFileInput extends React.Component {
   constructor(props) {
@@ -41,14 +42,15 @@ class DataInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.fileInput = React.createRef();
   }
-  handleChange(e) {
-    const files = e.target.files;
-    if (files && files[0]) this.props.handleFile(files[0]);
+  handleChange(file) {
+    // const files = e.target.files;
+    // if (files && files[0]) this.props.handleFile(files[0]);
+    this.props.handleFile(file)
   }
   render() {
     return (
       <>
-        <button
+        {/* <button
           style={{ marginLeft: 10 }}
           onClick={() => this.fileInput.current.click()}
         >
@@ -61,7 +63,8 @@ class DataInput extends React.Component {
           hidden
           accept={SheetJSFT}
           onChange={this.handleChange}
-        />
+        /> */}
+        <FilePicker onChange={this.handleChange}/>
       </>
     );
   }
